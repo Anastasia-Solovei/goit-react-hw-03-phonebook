@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import PropTypes from 'prop-types';
 
 import './ContactForm.scss';
 
@@ -90,5 +91,10 @@ class ContactForm extends Component {
     );
   }
 }
+
+ContactForm.propTypes = {
+  onAdd: PropTypes.func.isRequired,
+  onCheckContact: PropTypes.func.isRequired,
+};
 
 export default ContactForm;

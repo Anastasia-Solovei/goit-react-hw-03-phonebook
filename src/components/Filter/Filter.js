@@ -1,5 +1,6 @@
 import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import PropTypes from 'prop-types';
 
 import './Filter.scss';
 
@@ -20,6 +21,11 @@ const Filter = ({ value, onChange }) => {
       ></input>
     </div>
   );
+};
+
+Filter.propTypes = {
+  onChange: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
 };
 
 export default Filter;
